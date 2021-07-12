@@ -13,4 +13,14 @@ class Facility(models.Model):
     class Meta:
         managed = True
         db_table = 'facility'
+        ordering = ('facilityid',) 
+        
+class FacilityRiskTarget(models.Model):
+    facilityid = models.OneToOneField('Facility',on_delete=models.CASCADE, db_column='FacilityID', primary_key=True) 
+    risktarget_fc = models.FloatField(db_column='RiskTarget_FC', blank=True, null=True) 
+    risktarget_ac = models.FloatField(db_column='RiskTarget_AC', blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'facility_risk_target'
         ordering = ('facilityid',)

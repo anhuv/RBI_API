@@ -41,12 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest_framework_simplejwt',
-    'facility.apps.FacilityConfig',
-    'user.apps.UserConfig',
-    'siteApp.apps.SiteappConfig',
-    'equipment.apps.EquipmentConfig',
+    'rest_framework_simplejwt', 
     'component.apps.ComponentConfig',
+    'equipment.apps.EquipmentConfig',
+    'facility.apps.FacilityConfig',
+    # 'inspection.apps.InspectionConfig',
+    # 'proposal.apps.ProposalConfig', 
+    'siteApp.apps.SiteappConfig',
+    'user.apps.UserConfig', 
 ]
 
 MIDDLEWARE = [
